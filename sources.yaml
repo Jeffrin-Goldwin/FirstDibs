@@ -1,0 +1,34 @@
+defaults:
+  # Seconds to wait between requests. Be a good citizen.
+  request_delay: 1.0
+
+filters:
+  # A job notifies if it matches ANY title keyword AND ANY location,
+  # and matches NO exclude term. An empty list means no constraint on that axis.
+  title_keywords:
+    - engineer
+    - developer
+    - platform
+    - infrastructure
+    - backend
+    - sre
+  locations:
+    - remote
+    - india
+    - bangalore
+    - bengaluru
+    - hyderabad
+  exclude:
+    - intern
+    - manager
+    - director
+
+sources:
+  - company: stripe
+    ats: greenhouse
+    token: stripe
+    priority: high
+
+  - company: spotify
+    ats: lever
+    token: spotify
