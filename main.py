@@ -117,6 +117,9 @@ def main() -> None:
             log.info("sleeping %ds", HOUR)
             time.sleep(HOUR)
             run_once(store, notifier, cfg, only)
+    except KeyboardInterrupt:
+        # Ctrl+C is the intended way to stop --loop; exit quietly, no traceback.
+        log.info("⚠️ Key board interrupt detected, shutting down")
     finally:
         store.close()
 
