@@ -2,12 +2,13 @@
 
 from __future__ import annotations
 
-from adapters import ashby, greenhouse, lever, workday
+from adapters import ashby, greenhouse, lever, smartrecruiters, workday
 
 REGISTRY = {
     "greenhouse": greenhouse.fetch,
     "lever": lever.fetch,
     "ashby": ashby.fetch,
+    "smartrecruiters": smartrecruiters.fetch,
     "workday": workday.fetch,
 }
 

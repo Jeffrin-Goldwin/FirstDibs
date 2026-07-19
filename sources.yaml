@@ -6,18 +6,14 @@ filters:
   # A job notifies if it matches ANY title keyword AND ANY location,
   # and matches NO exclude term. An empty list means no constraint on that axis.
   title_keywords:
-    - engineer
-    - developer
+    - devops
     - platform
-    - infrastructure
-    - backend
     - sre
+    - site reliability
+    - reliability engineer
+    - infrastructure
   locations:
-    - remote
-    - india
-    - bangalore
-    - bengaluru
-    - hyderabad
+    - chennai
   exclude:
     - intern
     - manager
@@ -32,3 +28,12 @@ sources:
   - company: spotify
     ats: lever
     token: spotify
+
+  # Chennai-hiring companies (DevOps/Platform/SRE coverage)
+  - company: freshworks
+    ats: smartrecruiters
+    token: Freshworks
+
+  - company: tekion
+    ats: greenhouse
+    token: tekion
